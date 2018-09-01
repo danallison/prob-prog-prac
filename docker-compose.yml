@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  jupyter:
+    build: .
+    command: jupyter lab --ip=0.0.0.0 --allow-root
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8899:8888
