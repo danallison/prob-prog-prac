@@ -3,6 +3,8 @@ services:
   jupyter:
     build: .
     command: jupyter lab --ip=0.0.0.0 --allow-root
+    environment:
+      - socrata_app_token
     volumes:
       - .:/usr/src/app
     ports:
